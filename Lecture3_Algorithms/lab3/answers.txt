@@ -1,0 +1,11 @@
+sort1 uses: bubble
+
+How do you know?: bubble sort performs better in sorted*.txt scenario
+
+sort2 uses: merged
+
+How do you know?: Fastest using the random*.txt test.
+
+sort3 uses: selection
+
+How do you know?: it loses out in the sorted case.
