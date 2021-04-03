@@ -1,0 +1,118 @@
+/* Index Page Styles*/
+body {
+    margin: 0px;
+}
+/* Nav Styles */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.nav-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 38px;
+}
+
+.left-side{
+    display: flex;
+}
+
+.nav-wrapper > .left-side > div{
+    margin-right: 20px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+
+.nav-link-wrapper {
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black;
+}
+
+.nav-link-wrapper a:hover {
+    color:  black;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;   font-weight: bold;
+}
+
+/* About Me Page */
+.about-container{
+    display: flex;
+    align-items: center;
+    justify-content: center
+} img {
+    max-width: 80%
+}
+.about-image {
+    flex-basis: 40%;
+}
+.about-text {
+    font-size: 20px;
+}
+.img-darken {
+    transition: 1s;
+    filter: brightness(10%);
+}
+
+/* Calculator */
+.calculator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[type="button"] {
+   color: white;
+   border: solid black 2px;
+   width: 100%;
+   height: 100%;
+}
+input[type="text"] {    
+   color: white;
+   border: solid black 2px;
+   width: 100%;
+}
+.darkgray-button {
+    background-color: rgb(97, 92, 92);
+}
+.midgray-button {
+    background-color: rgba(145, 136, 136, 0.803);
+}
+.orange-button {
+    background-color: rgb(255, 153, 0);
+}
+.display-button{
+    background-color: rgb(51, 50, 50);
+}
+
+/* Images Page */
+.image-row{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+} 
+.image-column {
+    flex: 50%;
+    padding: 0 4px;
+}
+.image-column img{
+    margin-top: 8px;
+    vertical-align: middle;
+}
