@@ -1,0 +1,36 @@
+CREATE TABLE users (id INTEGER, username TEXT NOT NULL, hash TEXT NOT NULL, cash NUMERIC NOT NULL DEFAULT 10000.00, PRIMARY KEY(id));
+CREATE UNIQUE INDEX username ON users (username);
+
+CREATE TABLE stocks(
+stock_id INTEGER,
+symbol VARCHAR(10),
+shares INTEGER,
+FOREIGN KEY(stock_id) REFERENCES users(id)
+);
+
+CREATE TABLE history(
+history_id INTEGER,
+symbol VARCHAR(10),
+shares INTEGER,
+datetime TEXT,
+action TEXT,
+FOREIGN KEY(history_id) REFERENCES users(id)
+);
+
+TODO:
+
+register - DONE
+quote - DONE
+buy - DONE
+index - DONE
+sell - DONE
+history
+Personal Touch
+
+INSERT INTO stock (stock_id, price_per_share, symbol, quantity) VALUES ((select id from users where username="cookiemonster"), 10, "AAPL", 2);
+        stocks = db.execute("SELECT * FROM stock JOIN users ON stock.stock_id = users.id")
+        return render_template("buy.html", stocks=stocks)
+
+
+CREATE TABLE users (id INTEGER, username TEXT NOT NULL, hash TEXT NOT NULL, cash NUMERIC NOT NULL DEFAULT 10000.00, PRIMARY KEY(id));
+CREATE UNIQUE INDEX username ON users (username);
